@@ -6,40 +6,39 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-serif: 'Cormorant Garamond', ui-serif, Georgia, serif;
+    --font-sans: 'EB Garamond', ui-serif, Georgia, 'Times New Roman', serif;
+    --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
     --font-script: 'Great Vibes', cursive;
 
-    /* Island beach palette */
-    --color-sand-50: #fdfaf3;
-    --color-sand-100: #f9f1df;
-    --color-sand-200: #f1e2bf;
-    --color-sand-300: #e7cf97;
+    /* Colonial indigo & forest green palette */
+    --color-sand-50: #faf9f6;
+    --color-sand-100: #f4f1ea;
+    --color-sand-200: #e8e2d5;
+    --color-sand-300: #d4ccb8;
 
-    --color-lagoon-50: #effcfb;
-    --color-lagoon-100: #cbf3f0;
-    --color-lagoon-200: #97e7e2;
-    --color-lagoon-300: #5fd3cd;
-    --color-lagoon-400: #2bb8b3;
-    --color-lagoon-500: #169a98;
-    --color-lagoon-600: #137b7c;
-    --color-lagoon-700: #145f63;
-    --color-lagoon-800: #154c50;
-    --color-lagoon-900: #153f43;
+    --color-lagoon-50: #eef2ff;
+    --color-lagoon-100: #e0e7ff;
+    --color-lagoon-200: #c7d2fe;
+    --color-lagoon-300: #a5b4fc;
+    --color-lagoon-400: #818cf8;
+    --color-lagoon-500: #6366f1;
+    --color-lagoon-600: #4f46e5;
+    --color-lagoon-700: #4338ca;
+    --color-lagoon-800: #3730a3;
+    --color-lagoon-900: #312e81;
 
-    --color-coral-300: #ffb59b;
-    --color-coral-400: #ff8f6b;
-    --color-coral-500: #f96d44;
-    --color-coral-600: #e5512b;
+    --color-coral-300: #86d3a8;
+    --color-coral-400: #4db87a;
+    --color-coral-500: #2d6a4f;
+    --color-coral-600: #1b4332;
 
-    --color-palm-500: #4f9d69;
-    --color-palm-600: #3c7d52;
+    --color-palm-500: #355e3b;
+    --color-palm-600: #254a2c;
 }
 
-/* Sun-and-sea gradient used behind hero sections */
+/* Formal indigo gradient used behind hero sections */
 @utility bg-ocean {
-    background: linear-gradient(180deg, #effcfb 0%, #cbf3f0 35%, #97e7e2 100%);
+    background: linear-gradient(180deg, #f5f3ff 0%, #e0e7ff 35%, #c7d2fe 100%);
 }
 
 @utility text-script {

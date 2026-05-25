@@ -42,15 +42,19 @@
         </section>
 
         {{-- Venue --}}
-        <section class="rounded-3xl bg-lagoon-700 px-8 py-12 text-center text-lagoon-50">
-            <h2 class="font-serif text-4xl text-white">The Venue</h2>
-            <p class="mt-4 text-2xl font-serif">{{ config('wedding.venue.name') }}</p>
-            <p class="mt-1 text-lagoon-200">{{ config('wedding.venue.address') }}</p>
-            <p class="text-lagoon-200">{{ config('wedding.venue.city') }}</p>
-            <a href="{{ config('wedding.venue.map_url') }}" target="_blank" rel="noopener"
-               class="mt-6 inline-block rounded-full bg-coral-500 px-7 py-3 text-white font-medium hover:bg-coral-600 transition">
-                View on Map
-            </a>
+        <section class="relative overflow-hidden rounded-3xl px-8 py-12 text-center text-white"
+                 style="background-image: url('https://image-tc.galaxy.tf/wijpeg-6sr5mqfvzav8ti5x1qt313b8s/aerial-avalon-2-result.jpg?width=1920'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-lagoon-900/60"></div>
+            <div class="relative z-10">
+                <h2 class="font-serif text-4xl text-white">The Venue</h2>
+                <p class="mt-4 text-2xl font-serif">{{ config('wedding.venue.name') }}</p>
+                <p class="mt-1 text-lagoon-100">{{ config('wedding.venue.address') }}</p>
+                <p class="text-lagoon-100">{{ config('wedding.venue.city') }}</p>
+                <a href="{{ config('wedding.venue.map_url') }}" target="_blank" rel="noopener"
+                   class="mt-6 inline-block rounded-full bg-coral-500 px-7 py-3 text-white font-medium hover:bg-coral-600 transition">
+                    View on Map
+                </a>
+            </div>
         </section>
 
         {{-- Two-up info --}}

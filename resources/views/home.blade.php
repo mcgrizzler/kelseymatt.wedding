@@ -49,6 +49,39 @@
         </div>
     </section>
 
+    {{-- Venue photo gallery --}}
+    <section class="mx-auto max-w-5xl px-5 pt-16 pb-4">
+        <p class="text-center text-sm uppercase tracking-[0.3em] text-lagoon-500 mb-2">Catalina Island, California</p>
+        <h2 class="text-center font-serif text-3xl text-lagoon-800 mb-8">Descanso Beach Club</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="col-span-2 row-span-2 overflow-hidden rounded-2xl shadow-md">
+                <img src="https://image-tc.galaxy.tf/wijpeg-5xrr5svfs41d9vdogt6fha6vl/cabana-1835.jpg?width=1920"
+                     alt="Descanso Beach Club beachside lounge"
+                     class="h-full w-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-md">
+                <img src="https://image-tc.galaxy.tf/wijpeg-4ts05gukkrunvtdj4cz9750cr/catalina-20180411-2233-bluesky.jpg?width=860"
+                     alt="Descanso Beach with blue sky"
+                     class="h-48 w-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-md">
+                <img src="https://image-tc.galaxy.tf/wijpeg-9m21zgvi9wa2j9kpvdbyc2wcc/cabana-2341.jpg?width=860"
+                     alt="Descanso Beach Club cabana"
+                     class="h-48 w-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-md">
+                <img src="https://image-tc.galaxy.tf/wijpeg-71un4g8ebbcznyxacen7t51up/1q9b4594.jpg?width=860"
+                     alt="Descanso Beach chaise lounges"
+                     class="h-48 w-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-md">
+                <img src="https://image-tc.galaxy.tf/wijpeg-26ovbzucgz5v7id8lv00pbp/bar-0451-1_standard.jpg?crop=106%2C0%2C1708%2C1281"
+                     alt="Descanso Beach Club bar"
+                     class="h-48 w-full object-cover">
+            </div>
+        </div>
+    </section>
+
     {{-- Quick info cards --}}
     <section class="mx-auto max-w-5xl px-5 py-20">
         <div class="grid gap-6 sm:grid-cols-3">
