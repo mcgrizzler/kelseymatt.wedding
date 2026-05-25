@@ -16,9 +16,9 @@ return [
     | Date & Time
     |--------------------------------------------------------------------------
     */
-    'date'        => '2026-09-12',   // ISO date, used for countdown & formatting
-    'date_pretty' => 'Saturday, September 12th, 2026',
-    'time'        => '4:00 in the afternoon',
+    'date'        => '2026-04-11',   // ISO date, used for countdown & formatting
+    'date_pretty' => 'Sunday, April 11th, 2027',
+    'time'        => '4:30 in the afternoon',
 
     /*
     |--------------------------------------------------------------------------
