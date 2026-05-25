@@ -26,10 +26,10 @@ return [
     |--------------------------------------------------------------------------
     */
     'venue' => [
-        'name'    => 'Palm Cove Beach Resort',
-        'address' => '1 Shoreline Drive, Palm Cove',
-        'city'    => 'Key Largo, Florida',
-        'map_url' => 'https://maps.google.com/?q=Key+Largo+Florida',
+        'name'    => 'Descanso Beach Club',
+        'address' => '1 St Catherine Way',
+        'city'    => 'Avalon, California',
+        'map_url' => 'https://maps.google.com/?q=Avalon',
     ],
 
     /*
