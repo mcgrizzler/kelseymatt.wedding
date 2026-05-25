@@ -55,10 +55,10 @@
 
     <div class="rounded-2xl bg-lagoon-50 ring-1 ring-lagoon-100 px-6 py-5 text-sm text-lagoon-700 mb-8">
         <p>Need to make a change?
-            <a href="{{ route('magic-link.show') }}" class="font-medium text-lagoon-800 underline underline-offset-2 hover:text-coral-500 transition">
-                Enter your email
+            <a href="{{ route('rsvp.show', $invite->token) }}" class="font-medium text-lagoon-800 underline underline-offset-2 hover:text-coral-500 transition">
+                Update your RSVP
             </a>
-            and we'll send you a new link.
+            any time before {{ config('wedding.rsvp_deadline') }}.
         </p>
     </div>
 

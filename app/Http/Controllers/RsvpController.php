@@ -11,14 +11,11 @@ use Illuminate\View\View;
 
 class RsvpController extends Controller
 {
-    public function show(Request $request, string $token): View|RedirectResponse
+    public function show(Request $request, string $token): View
     {
         /** @var Invite $invite */
         $invite = $request->attributes->get('invite');
-
-        if ($invite->rsvp_status !== RsvpStatus::Pending) {
-            return redirect()->route('rsvp.confirm', $token);
-        }
+        $invite->load('guests');
 
         return view('rsvp.show', compact('invite'));
     }

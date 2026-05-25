@@ -3,7 +3,9 @@
 namespace App\Livewire;
 
 use App\Enums\RsvpStatus;
+use App\Mail\RsvpConfirmationEmail;
 use App\Models\Invite;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 use Livewire\Component;
@@ -19,9 +21,23 @@ class RsvpForm extends Component
 
     public function mount(): void
     {
-        $this->guests = [
-            ['name' => $this->invite->name, 'meal_choice' => '', 'dietary_restrictions' => ''],
-        ];
+        if ($this->invite->rsvp_status !== RsvpStatus::Pending && $this->invite->guests->isNotEmpty()) {
+            $this->attending = 'yes';
+            $this->guests = $this->invite->guests->map(fn ($guest) => [
+                'name' => $guest->name,
+                'meal_choice' => $guest->meal_choice ?? '',
+                'dietary_restrictions' => $guest->dietary_restrictions ?? '',
+            ])->toArray();
+        } elseif ($this->invite->rsvp_status === RsvpStatus::Declined) {
+            $this->attending = 'no';
+            $this->guests = [
+                ['name' => $this->invite->name, 'meal_choice' => '', 'dietary_restrictions' => ''],
+            ];
+        } else {
+            $this->guests = [
+                ['name' => $this->invite->name, 'meal_choice' => '', 'dietary_restrictions' => ''],
+            ];
+        }
     }
 
     public function addGuest(): void
@@ -69,6 +85,9 @@ class RsvpForm extends Component
             'rsvp_status' => $attending ? RsvpStatus::Confirmed : RsvpStatus::Declined,
             'rsvp_submitted_at' => now(),
         ]);
+
+        $this->invite->load('guests');
+        Mail::to($this->invite->email)->queue(new RsvpConfirmationEmail($this->invite));
 
         $this->redirect(route('rsvp.confirm', $this->invite->token));
     }
