@@ -7,6 +7,7 @@
     $p1 = config('wedding.partner_one');
     $p2 = config('wedding.partner_two');
     $mealOptions = config('wedding.meal_options', []);
+    $defaultGuests = [['name' => $invite->name, 'meal_choice' => '', 'dietary_restrictions' => '']];
 @endphp
 
 <div class="mx-auto max-w-2xl px-5 py-16">
@@ -149,7 +150,7 @@ function rsvpForm(maxGuests, primaryName) {
                 this.attending = '{{ old('attending') }}';
             @endif
             @if(old('guests'))
-                this.guests = @json(old('guests', [['name' => $invite->name, 'meal_choice' => '', 'dietary_restrictions' => '']]));
+                this.guests = @json(old('guests', $defaultGuests));
             @endif
         },
         addGuest() {
