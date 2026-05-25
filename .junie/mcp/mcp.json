@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "/Users/tylerneal/Library/Application Support/Herd/bin/php84",
+            "args": [
+                "/Users/tylerneal/Developer/kelseymatt.wedding/artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
