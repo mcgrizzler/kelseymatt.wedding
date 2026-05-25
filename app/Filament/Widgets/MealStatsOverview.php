@@ -20,7 +20,7 @@ class MealStatsOverview extends BaseWidget
             'heroicon-m-cake',
             'heroicon-m-fire',
             'heroicon-m-sparkles',
-            'heroicon-m-leaf',
+            'heroicon-m-heart',
         ];
 
         $stats = [];
