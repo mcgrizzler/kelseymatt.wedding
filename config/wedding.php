@@ -29,7 +29,7 @@ return [
         'name'    => 'Descanso Beach Club',
         'address' => '1 St Catherine Way',
         'city'    => 'Avalon, California',
-        'map_url' => 'https://maps.google.com/?q=Avalon',
+        'map_url' => 'https://www.google.com/maps/place/Descanso+Beach+Club/@33.3506355,-118.3310889,1371m/data=!3m2!1e3!4b1!4m6!3m5!1s0x80dd77199c77d347:0xe32063b21ee8ef1f!8m2!3d33.3506355!4d-118.328514!16s%2Fg%2F1tctfxwy?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D',
     ],
 
     /*
