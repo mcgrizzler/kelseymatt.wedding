@@ -37,8 +37,8 @@ return [
     | RSVP
     |--------------------------------------------------------------------------
     */
-    'rsvp_deadline'  => 'August 1st, 2026',
-    'max_guests'     => 6,
+    'rsvp_deadline'  => 'Feburary 1st, 2027',
+    'max_guests'     => 2,
     'meal_options'   => [
         'Grilled Mahi-Mahi',
         'Island Jerk Chicken',
