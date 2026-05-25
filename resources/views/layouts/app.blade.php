@@ -13,6 +13,7 @@
     <title>@yield('title', "$p1 & $p2") · {{ config('wedding.date_pretty') }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 <body class="min-h-screen bg-sand-50 font-sans text-lagoon-900 antialiased flex flex-col">
 
@@ -48,5 +49,6 @@
         </div>
     </footer>
 
+    @livewireScripts
 </body>
 </html>
