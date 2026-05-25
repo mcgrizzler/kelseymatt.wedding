@@ -16,12 +16,6 @@ class MealStatsOverview extends BaseWidget
     protected function getStats(): array
     {
         $colors = ['success', 'info', 'warning', 'primary'];
-        $icons = [
-            'heroicon-m-cake',
-            'heroicon-m-fire',
-            'heroicon-m-sparkles',
-            'heroicon-m-heart',
-        ];
 
         $stats = [];
 
@@ -33,7 +27,6 @@ class MealStatsOverview extends BaseWidget
 
             $stats[] = Stat::make($meal, $count)
                 ->description('guests')
-                ->descriptionIcon($icons[$index] ?? 'heroicon-m-user')
                 ->color($colors[$index] ?? 'gray');
         }
 
