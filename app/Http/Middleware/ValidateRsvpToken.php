@@ -2,22 +2,22 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Invite;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class EnsureAdmin
+class ValidateRsvpToken
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  Closure(Request): (Response)  $next
-     */
     public function handle(Request $request, Closure $next): Response
     {
-        if (! $request->session()->get('is_admin')) {
-            return redirect()->route('admin.login');
+        $invite = Invite::where('token', $request->route('token'))->first();
+
+        if (! $invite) {
+            abort(404);
         }
+
+        $request->attributes->set('invite', $invite);
 
         return $next($request);
     }
