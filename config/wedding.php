@@ -16,7 +16,7 @@ return [
     | Date & Time
     |--------------------------------------------------------------------------
     */
-    'date'        => '2027-04-11',   // ISO date, used for countdown & formatting
+    'date'        => '2026-04-11',   // ISO date, used for countdown & formatting
     'date_pretty' => 'Sunday, April 11th, 2027',
     'time'        => '4:30 in the afternoon',
 
@@ -37,8 +37,14 @@ return [
     | RSVP
     |--------------------------------------------------------------------------
     */
-    'max_guests' => 6,
     'rsvp_deadline'  => 'Feburary 1st, 2027',
+    'max_guests'     => 2,
+    'meal_options'   => [
+        'Grilled Mahi-Mahi',
+        'Island Jerk Chicken',
+        'Coconut Curry (Vegetarian)',
+        'Garden Vegan Plate',
+    ],
 
     /*
     |--------------------------------------------------------------------------
