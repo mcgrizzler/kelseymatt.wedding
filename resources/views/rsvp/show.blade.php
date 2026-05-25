@@ -116,7 +116,7 @@
 
                 {{-- Add guest button --}}
                 <button type="button"
-                        x-show="guests.length < maxGuests"
+                        x-show="maxGuests > 1 && guests.length < maxGuests"
                         @click="addGuest()"
                         class="mb-6 flex items-center gap-2 text-sm font-medium text-lagoon-600 hover:text-lagoon-800 transition">
                     <span class="flex h-7 w-7 items-center justify-center rounded-full bg-lagoon-100 text-lagoon-700 text-lg leading-none">+</span>
@@ -155,7 +155,7 @@ function rsvpForm(maxGuests, primaryName) {
         },
         addGuest() {
             if (this.guests.length < this.maxGuests) {
-                this.guests.push({ name: '', meal_choice: '', dietary_restrictions: '' });
+                this.guests = [...this.guests, { name: '', meal_choice: '', dietary_restrictions: '' }];
             }
         },
         removeGuest(index) {
