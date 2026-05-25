@@ -53,6 +53,6 @@ return [
     | Password used to view the private RSVP dashboard. Set ADMIN_PASSWORD
     | in your .env file. Defaults to a placeholder for local development.
     */
-    'admin_password' => env('ADMIN_PASSWORD', 'changeme'),
+    'admin_password' => env('ADMIN_PASSWORD', 'WeL0v3BlackOlives'),
 
 ];
