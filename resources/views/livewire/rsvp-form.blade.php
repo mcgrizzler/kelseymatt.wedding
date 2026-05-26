@@ -33,7 +33,7 @@
                 <div class="mb-6 rounded-2xl bg-sand-50 ring-1 ring-sand-200 p-5" wire:key="guest-{{ $index }}">
                     <div class="flex items-center justify-between mb-4">
                         <h3 class="font-semibold text-lagoon-800">
-                            {{ $index === 0 ? 'Your Details' : 'Guest ' . $index }}
+                            {{ $index === 0 ? 'Your Info' : 'Guest ' . $index }}
                         </h3>
                         @if($index > 0)
                             <button type="button" wire:click="removeGuest({{ $index }})"

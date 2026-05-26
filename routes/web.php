@@ -5,7 +5,7 @@ use App\Http\Controllers\RsvpController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
-Route::view('/details', 'details')->name('details');
+Route::view('/info', 'info')->name('info');
 
 Route::get('/login', [MagicLinkController::class, 'show'])->name('magic-link.show');
 Route::post('/login', [MagicLinkController::class, 'send'])->name('magic-link.send');

@@ -41,9 +41,9 @@
                    class="rounded-full bg-coral-500 px-8 py-3 text-white font-medium shadow-lg hover:bg-coral-600 transition">
                     RSVP Now
                 </a>
-                <a href="{{ route('details') }}"
+                <a href="{{ route('info') }}"
                    class="rounded-full bg-white/20 backdrop-blur-sm px-8 py-3 text-white font-medium ring-1 ring-white/40 hover:bg-white/30 transition">
-                    Wedding Details
+                    Wedding Info
                 </a>
             </div>
         </div>
