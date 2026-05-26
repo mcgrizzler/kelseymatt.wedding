@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources\Invites\Pages;
 
+use App\Filament\Exports\GuestExporter;
 use App\Filament\Imports\InviteImporter;
 use App\Filament\Resources\Invites\InviteResource;
 use Filament\Actions\CreateAction;
+use Filament\Actions\ExportAction;
 use Filament\Actions\ImportAction;
 use Filament\Resources\Pages\ListRecords;
 
@@ -18,6 +20,9 @@ class ListInvites extends ListRecords
             ImportAction::make()
                 ->importer(InviteImporter::class)
                 ->label('Import CSV'),
+            ExportAction::make()
+                ->exporter(GuestExporter::class)
+                ->label('Export Guests'),
             CreateAction::make(),
         ];
     }
