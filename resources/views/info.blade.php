@@ -11,7 +11,7 @@
             <p class="text-sm uppercase tracking-[0.3em] text-white/70">Everything you need to know</p>
             <h1 class="mt-4 text-script text-6xl text-white drop-shadow-lg">Info</h1>
             <p class="mt-4 font-serif text-lg text-white/80">
-                Toes in the sand, drinks in hand &mdash; here's how the day will unfold.
+                Here's how the day will unfold.
             </p>
         </div>
     </section>
@@ -24,19 +24,18 @@
             <div class="mt-10 space-y-4">
                 @php
                     $schedule = [
-                        ['3:30 PM', 'Guest Arrival', 'Grab a welcome drink and find your seat on the sand.'],
-                        ['4:00 PM', 'Ceremony', 'Say "I do" as the tide rolls in.'],
-                        ['4:30 PM', 'Cocktail Hour', 'Tropical cocktails and ocean views.'],
-                        ['6:00 PM', 'Dinner & Toasts', 'A seaside feast under string lights.'],
-                        ['8:00 PM', 'Dancing', 'Barefoot on the beach until the stars come out.'],
+                        ['4:00 PM', 'Guest Arrival'],
+                        ['4:30 PM', 'Ceremony'],
+                        ['5:00 PM', 'Cocktail Hour'],
+                        ['6:30 PM', 'Dinner & Toasts'],
+                        ['8:00 PM', 'After Party'],
                     ];
                 @endphp
-                @foreach ($schedule as [$time, $name, $desc])
+                @foreach ($schedule as [$time, $name])
                     <div class="flex gap-5 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-sand-200">
                         <div class="w-24 shrink-0 text-lagoon-600 font-semibold">{{ $time }}</div>
                         <div>
                             <h3 class="font-serif text-xl text-lagoon-800">{{ $name }}</h3>
-                            <p class="text-lagoon-600">{{ $desc }}</p>
                         </div>
                     </div>
                 @endforeach
@@ -64,16 +63,15 @@
             <div class="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-sand-200">
                 <h3 class="font-serif text-2xl text-lagoon-800">Travel &amp; Stay</h3>
                 <p class="mt-3 text-lagoon-600">
-                    A block of rooms is reserved at the resort under "{{ config('wedding.partner_one') }} &amp;
-                    {{ config('wedding.partner_two') }}." The nearest airport is about 90 minutes away &mdash;
-                    we recommend arriving a day early to settle into island time.
+                    Avalon has plenty of accommodations to fit every style and budget &mdash; from cozy inns to
+                    waterfront hotels. We will be staying at the Hotel Atwater, a charming spot right in the heart
+                    of town, and recommend booking early as the island fills up fast.
                 </p>
             </div>
             <div class="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-sand-200">
                 <h3 class="font-serif text-2xl text-lagoon-800">Dress Code</h3>
                 <p class="mt-3 text-lagoon-600">
-                    Beach formal. Think breezy linens, flowing dresses, and pastel hues. Leave the stilettos
-                    behind &mdash; the ceremony is right on the sand, so flats or bare feet are encouraged.
+                    Beach formal. Think breezy linens, flowing dresses, and pastel hues.
                 </p>
             </div>
         </section>
