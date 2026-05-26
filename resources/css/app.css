@@ -45,3 +45,8 @@
     font-family: var(--font-script);
     line-height: 1.1;
 }
+
+@keyframes wave-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}

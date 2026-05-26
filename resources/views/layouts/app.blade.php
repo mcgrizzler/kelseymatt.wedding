@@ -38,10 +38,16 @@
     </main>
 
     <footer class="relative mt-auto">
-        <svg class="block w-full text-lagoon-700" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-            <path fill="currentColor"
-                  d="M0,64 C240,128 480,0 720,32 C960,64 1200,128 1440,64 L1440,120 L0,120 Z"></path>
-        </svg>
+        <div class="overflow-hidden w-full">
+            <svg class="block text-lagoon-700 -mb-px"
+                 style="width: 200%; animation: wave-scroll 10s linear infinite;"
+                 viewBox="0 0 2880 120"
+                 preserveAspectRatio="none"
+                 aria-hidden="true">
+                <path fill="currentColor"
+                      d="M0,64 C240,128 480,0 720,32 C960,64 1200,128 1440,64 C1680,128 1920,0 2160,32 C2400,64 2640,128 2880,64 L2880,120 L0,120 Z"></path>
+            </svg>
+        </div>
         <div class="bg-lagoon-700 text-lagoon-100 text-center px-5 pb-10 -mt-px">
             <p class="text-script text-4xl text-white">{{ $p1 }} &amp; {{ $p2 }}</p>
             <p class="mt-2 text-sm tracking-widest uppercase">{{ config('wedding.date_pretty') }}</p>
