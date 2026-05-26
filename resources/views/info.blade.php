@@ -9,7 +9,7 @@
         <div class="absolute inset-0 bg-lagoon-900/65"></div>
         <div class="relative z-10 mx-auto max-w-3xl px-5 py-20 text-center">
             <p class="text-sm uppercase tracking-[0.3em] text-white/70">Everything you need to know</p>
-            <h1 class="mt-4 text-script text-6xl text-white drop-shadow-lg">The Info</h1>
+            <h1 class="mt-4 text-script text-6xl text-white drop-shadow-lg">Info</h1>
             <p class="mt-4 font-serif text-lg text-white/80">
                 Toes in the sand, drinks in hand &mdash; here's how the day will unfold.
             </p>
