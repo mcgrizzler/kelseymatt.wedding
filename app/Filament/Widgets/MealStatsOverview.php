@@ -4,6 +4,7 @@ namespace App\Filament\Widgets;
 
 use App\Enums\RsvpStatus;
 use App\Models\Guest;
+use App\Models\MealOption;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
@@ -19,13 +20,13 @@ class MealStatsOverview extends BaseWidget
 
         $stats = [];
 
-        foreach (config('wedding.meal_options') as $index => $meal) {
+        foreach (MealOption::active()->get() as $index => $mealOption) {
             $count = Guest::whereHas(
                 'invite',
                 fn ($q) => $q->where('rsvp_status', RsvpStatus::Confirmed)
-            )->where('meal_choice', $meal)->count();
+            )->where('meal_choice', $mealOption->name)->count();
 
-            $stats[] = Stat::make($meal, $count)
+            $stats[] = Stat::make($mealOption->name, $count)
                 ->description('guests')
                 ->color($colors[$index] ?? 'gray');
         }

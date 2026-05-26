@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enums\RsvpStatus;
 use App\Models\Invite;
+use App\Models\MealOption;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -24,7 +25,7 @@ class RsvpController extends Controller
     {
         /** @var Invite $invite */
         $invite = $request->attributes->get('invite');
-        $mealOptions = config('wedding.meal_options', []);
+        $mealOptions = MealOption::active()->pluck('name')->all();
 
         $validated = $request->validate([
             'attending' => ['required', 'in:yes,no'],

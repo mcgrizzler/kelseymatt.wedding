@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Run `php artisan app:create-admin-user` to create an admin account.
+        $this->call(MealOptionSeeder::class);
     }
 }

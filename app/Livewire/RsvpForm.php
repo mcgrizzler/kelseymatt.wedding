@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Enums\RsvpStatus;
 use App\Mail\RsvpConfirmationEmail;
 use App\Models\Invite;
+use App\Models\MealOption;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
@@ -56,7 +57,7 @@ class RsvpForm extends Component
 
     public function submit(): void
     {
-        $mealOptions = config('wedding.meal_options', []);
+        $mealOptions = MealOption::active()->pluck('name')->all();
 
         $this->validate([
             'attending' => ['required', 'in:yes,no'],
@@ -95,7 +96,7 @@ class RsvpForm extends Component
     public function render(): View
     {
         return view('livewire.rsvp-form', [
-            'mealOptions' => config('wedding.meal_options', []),
+            'mealOptions' => MealOption::active()->pluck('name')->all(),
         ]);
     }
 }

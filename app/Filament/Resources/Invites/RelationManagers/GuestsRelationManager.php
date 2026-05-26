@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Invites\RelationManagers;
 
+use App\Models\MealOption;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
@@ -29,10 +30,7 @@ class GuestsRelationManager extends RelationManager
                     ->maxLength(255),
 
                 Select::make('meal_choice')
-                    ->options(
-                        collect(config('wedding.meal_options', []))
-                            ->mapWithKeys(fn (string $option) => [$option => $option])
-                    )
+                    ->options(MealOption::options())
                     ->nullable(),
 
                 Textarea::make('dietary_restrictions')
