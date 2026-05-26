@@ -21,14 +21,16 @@ class GuestExporter extends Exporter
 
             ExportColumn::make('invite.rsvp_status')
                 ->label('RSVP Status')
-                ->formatStateUsing(fn (?RsvpStatus $state): string => $state?->label() ?? ''),
+                ->formatStateUsing(fn (mixed $state): string => $state instanceof RsvpStatus
+                    ? $state->label()
+                    : (RsvpStatus::tryFrom((string) $state)?->label() ?? '')),
 
             ExportColumn::make('name')
                 ->label('Guest Name'),
 
             ExportColumn::make('is_primary')
                 ->label('Primary')
-                ->formatStateUsing(fn (bool $state): string => $state ? 'Yes' : 'No'),
+                ->formatStateUsing(fn (mixed $state): string => $state ? 'Yes' : 'No'),
 
             ExportColumn::make('meal_choice')
                 ->label('Meal Choice'),
