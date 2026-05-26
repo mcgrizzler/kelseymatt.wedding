@@ -4,11 +4,13 @@
 
 @section('content')
     {{-- Page header --}}
-    <section class="bg-ocean">
-        <div class="mx-auto max-w-3xl px-5 py-20 text-center">
-            <p class="text-sm uppercase tracking-[0.3em] text-lagoon-600">Everything you need to know</p>
-            <h1 class="mt-4 text-script text-6xl text-lagoon-800">The Details</h1>
-            <p class="mt-4 font-serif text-lg text-lagoon-700">
+    <section class="relative overflow-hidden flex items-center justify-center"
+             style="background-image: url('https://image-tc.galaxy.tf/wijpeg-5xrr5svfs41d9vdogt6fha6vl/cabana-1835.jpg?width=1920'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-lagoon-900/65"></div>
+        <div class="relative z-10 mx-auto max-w-3xl px-5 py-20 text-center">
+            <p class="text-sm uppercase tracking-[0.3em] text-white/70">Everything you need to know</p>
+            <h1 class="mt-4 text-script text-6xl text-white drop-shadow-lg">The Details</h1>
+            <p class="mt-4 font-serif text-lg text-white/80">
                 Toes in the sand, drinks in hand &mdash; here's how the day will unfold.
             </p>
         </div>
@@ -31,7 +33,7 @@
                 @endphp
                 @foreach ($schedule as [$time, $name, $desc])
                     <div class="flex gap-5 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-sand-200">
-                        <div class="w-24 shrink-0 text-coral-500 font-semibold">{{ $time }}</div>
+                        <div class="w-24 shrink-0 text-lagoon-600 font-semibold">{{ $time }}</div>
                         <div>
                             <h3 class="font-serif text-xl text-lagoon-800">{{ $name }}</h3>
                             <p class="text-lagoon-600">{{ $desc }}</p>
@@ -51,7 +53,7 @@
                 <p class="mt-1 text-lagoon-100">{{ config('wedding.venue.address') }}</p>
                 <p class="text-lagoon-100">{{ config('wedding.venue.city') }}</p>
                 <a href="{{ config('wedding.venue.map_url') }}" target="_blank" rel="noopener"
-                   class="mt-6 inline-block rounded-full bg-coral-500 px-7 py-3 text-white font-medium hover:bg-coral-600 transition">
+                   class="mt-6 inline-block rounded-full bg-lagoon-600 px-7 py-3 text-white font-medium hover:bg-lagoon-700 transition">
                     View on Map
                 </a>
             </div>
