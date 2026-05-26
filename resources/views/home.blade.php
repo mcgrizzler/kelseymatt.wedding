@@ -7,21 +7,21 @@
     @endphp
 
     {{-- Hero --}}
-    <section class="bg-ocean relative overflow-hidden">
-        {{-- Sun --}}
-        <div class="pointer-events-none absolute -top-16 right-10 h-56 w-56 rounded-full bg-sand-200/70 blur-2xl"></div>
+    <section class="relative overflow-hidden min-h-[85vh] flex items-center"
+             style="background-image: url('https://image-tc.galaxy.tf/wijpeg-6sr5mqfvzav8ti5x1qt313b8s/aerial-avalon-2-result.jpg?width=1920'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-lagoon-900/65"></div>
 
-        <div class="relative mx-auto max-w-3xl px-5 py-24 sm:py-32 text-center">
-            <p class="text-sm uppercase tracking-[0.3em] text-lagoon-600">We're getting married</p>
+        <div class="relative z-10 mx-auto max-w-3xl px-5 py-24 sm:py-32 text-center w-full">
+            <p class="text-sm uppercase tracking-[0.3em] text-white/70">We're getting married</p>
 
-            <h1 class="mt-6 text-script text-7xl sm:text-8xl text-lagoon-800 leading-none">
-                {{ $p1 }} <span class="text-coral-500">&amp;</span> {{ $p2 }}
+            <h1 class="mt-6 text-script text-7xl sm:text-8xl text-white leading-none drop-shadow-lg">
+                {{ $p1 }} <span class="text-coral-400">&amp;</span> {{ $p2 }}
             </h1>
 
-            <p class="mt-8 text-xl sm:text-2xl font-serif text-lagoon-700">
+            <p class="mt-8 text-xl sm:text-2xl font-serif text-white/90">
                 {{ config('wedding.date_pretty') }}
             </p>
-            <p class="mt-1 font-serif text-lagoon-600 text-lg">
+            <p class="mt-1 font-serif text-white/70 text-lg">
                 {{ config('wedding.venue.name') }} &middot; {{ config('wedding.venue.city') }}
             </p>
 
@@ -29,20 +29,20 @@
             <div id="countdown" data-date="{{ config('wedding.date') }}T16:00:00"
                  class="mt-12 flex justify-center gap-4 sm:gap-6">
                 @foreach (['days' => 'Days', 'hours' => 'Hours', 'minutes' => 'Minutes', 'seconds' => 'Seconds'] as $key => $label)
-                    <div class="w-18 sm:w-20 rounded-2xl bg-white/70 px-3 py-3 shadow-sm ring-1 ring-white/60">
-                        <div data-unit="{{ $key }}" class="text-2xl sm:text-3xl font-serif font-semibold text-lagoon-800">--</div>
-                        <div class="text-[10px] uppercase tracking-widest text-lagoon-500">{{ $label }}</div>
+                    <div class="w-18 sm:w-20 rounded-2xl bg-white/15 backdrop-blur-sm px-3 py-3 ring-1 ring-white/30">
+                        <div data-unit="{{ $key }}" class="text-2xl sm:text-3xl font-serif font-semibold text-white">--</div>
+                        <div class="text-[10px] uppercase tracking-widest text-white/60">{{ $label }}</div>
                     </div>
                 @endforeach
             </div>
 
             <div class="mt-12 flex flex-wrap justify-center gap-4">
                 <a href="{{ route('magic-link.show') }}"
-                   class="rounded-full bg-coral-500 px-8 py-3 text-white font-medium shadow-md hover:bg-coral-600 transition">
+                   class="rounded-full bg-coral-500 px-8 py-3 text-white font-medium shadow-lg hover:bg-coral-600 transition">
                     RSVP Now
                 </a>
                 <a href="{{ route('details') }}"
-                   class="rounded-full bg-white/70 px-8 py-3 text-lagoon-700 font-medium ring-1 ring-lagoon-200 hover:bg-white transition">
+                   class="rounded-full bg-white/20 backdrop-blur-sm px-8 py-3 text-white font-medium ring-1 ring-white/40 hover:bg-white/30 transition">
                     Wedding Details
                 </a>
             </div>
