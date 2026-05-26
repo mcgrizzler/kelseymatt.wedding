@@ -12,7 +12,7 @@
         <div class="absolute inset-0 bg-lagoon-900/65"></div>
 
         <div class="relative z-10 mx-auto max-w-3xl px-5 py-24 sm:py-32 text-center w-full">
-            <p class="text-sm uppercase tracking-[0.3em] text-white/70">We're getting married</p>
+            <p class="text-sm uppercase tracking-[0.3em] text-white/70">We're getting married!</p>
 
             <h1 class="mt-6 text-script text-7xl sm:text-8xl text-white leading-none drop-shadow-lg">
                 {{ $p1 }} <span class="text-coral-400">&amp;</span> {{ $p2 }}
