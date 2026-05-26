@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Invites\Pages;
 use App\Filament\Exports\GuestExporter;
 use App\Filament\Imports\InviteImporter;
 use App\Filament\Resources\Invites\InviteResource;
+use App\Models\Guest;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ExportAction;
 use Filament\Actions\ImportAction;
@@ -22,7 +23,8 @@ class ListInvites extends ListRecords
                 ->label('Import CSV'),
             ExportAction::make()
                 ->exporter(GuestExporter::class)
-                ->label('Export Guests'),
+                ->label('Export Guests')
+                ->modifyQueryUsing(fn () => Guest::query()->with('invite')),
             CreateAction::make(),
         ];
     }
