@@ -10,35 +10,35 @@
     --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
     --font-script: 'Great Vibes', cursive;
 
-    /* Colonial indigo & forest green palette */
+    /* Colonial forest green & royal blue palette */
     --color-sand-50: #faf9f6;
     --color-sand-100: #f4f1ea;
     --color-sand-200: #e8e2d5;
     --color-sand-300: #d4ccb8;
 
-    --color-lagoon-50: #eef2ff;
-    --color-lagoon-100: #e0e7ff;
-    --color-lagoon-200: #c7d2fe;
-    --color-lagoon-300: #a5b4fc;
-    --color-lagoon-400: #818cf8;
-    --color-lagoon-500: #6366f1;
-    --color-lagoon-600: #4f46e5;
-    --color-lagoon-700: #4338ca;
-    --color-lagoon-800: #3730a3;
-    --color-lagoon-900: #312e81;
+    --color-lagoon-50: #f1f8f4;
+    --color-lagoon-100: #ddf0e4;
+    --color-lagoon-200: #bde1cc;
+    --color-lagoon-300: #8ec9a7;
+    --color-lagoon-400: #5aaa7e;
+    --color-lagoon-500: #3a8f61;
+    --color-lagoon-600: #2d7350;
+    --color-lagoon-700: #265f43;
+    --color-lagoon-800: #1f4d36;
+    --color-lagoon-900: #1a3f2c;
 
-    --color-coral-300: #86d3a8;
-    --color-coral-400: #4db87a;
-    --color-coral-500: #2d6a4f;
-    --color-coral-600: #1b4332;
+    --color-coral-300: #93b4f7;
+    --color-coral-400: #6090ed;
+    --color-coral-500: #4169e1;
+    --color-coral-600: #2d52c5;
 
-    --color-palm-500: #355e3b;
-    --color-palm-600: #254a2c;
+    --color-palm-500: #2d5a3d;
+    --color-palm-600: #1e3f2a;
 }
 
-/* Formal indigo gradient used behind hero sections */
+/* Formal green gradient used behind hero sections */
 @utility bg-ocean {
-    background: linear-gradient(180deg, #f5f3ff 0%, #e0e7ff 35%, #c7d2fe 100%);
+    background: linear-gradient(180deg, #f1f8f4 0%, #ddf0e4 35%, #bde1cc 100%);
 }
 
 @utility text-script {
