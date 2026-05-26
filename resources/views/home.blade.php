@@ -7,7 +7,7 @@
     @endphp
 
     {{-- Hero --}}
-    <section class="relative overflow-hidden min-h-[85vh] flex items-center"
+    <section class="relative overflow-hidden min-h-[55vh] flex items-center"
              style="background-image: url('https://image-tc.galaxy.tf/wijpeg-6sr5mqfvzav8ti5x1qt313b8s/aerial-avalon-2-result.jpg?width=1920'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-lagoon-900/65"></div>
 
