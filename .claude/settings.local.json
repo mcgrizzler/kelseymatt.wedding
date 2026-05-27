@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:www.visitcatalinaisland.com)"
+      "WebFetch(domain:www.visitcatalinaisland.com)",
+      "Bash(php artisan *)",
+      "Bash(curl -s http://127.0.0.1:8124/ -o /tmp/home.html)",
+      "Read(//tmp/**)",
+      "Bash(pkill -f \"artisan serve\")"
     ]
   }
 }

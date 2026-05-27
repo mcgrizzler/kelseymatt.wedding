@@ -27,10 +27,10 @@
 
             {{-- Countdown --}}
             <div id="countdown" data-date="{{ config('wedding.date') }}T16:00:00"
-                 class="mt-12 flex justify-center gap-4 sm:gap-6">
-                @foreach (['days' => 'Days', 'hours' => 'Hours', 'minutes' => 'Minutes', 'seconds' => 'Seconds'] as $key => $label)
-                    <div class="w-18 sm:w-20 rounded-2xl bg-white/15 backdrop-blur-sm px-3 py-3 ring-1 ring-white/30">
-                        <div data-unit="{{ $key }}" class="text-2xl sm:text-3xl font-serif font-semibold text-white">--</div>
+                 class="mt-12 flex flex-wrap justify-center gap-2 sm:gap-6">
+                @foreach (['days' => 'Days', 'hours' => 'Hours', 'minutes' => 'Minutes', 'seconds' => 'Seconds', 'ms' => 'Ms'] as $key => $label)
+                    <div class="w-14 sm:w-20 rounded-2xl bg-white/15 backdrop-blur-sm px-2 sm:px-3 py-3 ring-1 ring-white/30">
+                        <div data-unit="{{ $key }}" class="text-xl sm:text-3xl font-serif font-semibold text-white tabular-nums">--</div>
                         <div class="text-[10px] uppercase tracking-widest text-white/60">{{ $label }}</div>
                     </div>
                 @endforeach
