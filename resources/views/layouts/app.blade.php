@@ -52,7 +52,7 @@
             <p class="text-script text-4xl text-white">{{ $p1 }} &amp; {{ $p2 }}</p>
             <p class="mt-2 text-sm tracking-widest uppercase">{{ config('wedding.date_pretty') }}</p>
             <p class="mt-1 text-sm text-lagoon-200">{{ config('wedding.venue.name') }} · {{ config('wedding.venue.city') }}</p>
-            <p class="mt-4 text-xs text-lagoon-400">Site by <a href="https://gravis.dev" target="_blank" rel="noopener" class="hover:text-white transition">gravis.dev</a></p>
+            <p class="mt-4 text-xs text-lagoon-400">2026 <a href="https://gravis.dev" target="_blank" rel="noopener" class="hover:text-white transition">gravis.dev</a></p>
         </div>
     </footer>
 
