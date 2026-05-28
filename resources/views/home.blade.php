@@ -27,10 +27,10 @@
 
             {{-- Countdown --}}
             <div id="countdown" data-date="{{ config('wedding.date') }}T16:00:00"
-                 class="mt-12 flex justify-center gap-4 sm:gap-6">
-                @foreach (['days' => 'Days', 'hours' => 'Hours', 'minutes' => 'Minutes', 'seconds' => 'Seconds'] as $key => $label)
-                    <div class="w-18 sm:w-20 rounded-2xl bg-white/15 backdrop-blur-sm px-3 py-3 ring-1 ring-white/30">
-                        <div data-unit="{{ $key }}" class="text-2xl sm:text-3xl font-serif font-semibold text-white">--</div>
+                 class="mt-12 flex flex-wrap justify-center gap-2 sm:gap-6">
+                @foreach (['days' => 'Days', 'hours' => 'Hours', 'minutes' => 'Minutes', 'seconds' => 'Seconds', 'ms' => 'Ms'] as $key => $label)
+                    <div class="w-14 sm:w-20 rounded-2xl bg-white/15 backdrop-blur-sm px-2 sm:px-3 py-3 ring-1 ring-white/30">
+                        <div data-unit="{{ $key }}" class="text-xl sm:text-3xl font-serif font-semibold text-white tabular-nums">--</div>
                         <div class="text-[10px] uppercase tracking-widest text-white/60">{{ $label }}</div>
                     </div>
                 @endforeach
@@ -55,28 +55,28 @@
         <h2 class="text-center font-serif text-3xl text-lagoon-800 mb-8">Descanso Beach Club</h2>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <div class="col-span-2 row-span-2 overflow-hidden rounded-2xl shadow-md">
-                <img src="https://image-tc.galaxy.tf/wijpeg-5xrr5svfs41d9vdogt6fha6vl/cabana-1835.jpg?width=1920"
-                     alt="Descanso Beach Club beachside lounge"
+                <img src="{{ asset('images/kelsey-matt-engagement.jpg') }}"
+                     alt="{{ $p1 }} and {{ $p2 }} at Avalon Harbor, Catalina Island"
                      class="h-full w-full object-cover">
             </div>
             <div class="overflow-hidden rounded-2xl shadow-md">
-                <img src="https://image-tc.galaxy.tf/wijpeg-4ts05gukkrunvtdj4cz9750cr/catalina-20180411-2233-bluesky.jpg?width=860"
-                     alt="Descanso Beach with blue sky"
+                <img src="{{ asset('images/kelsey-matt-fountain.jpg') }}"
+                     alt="{{ $p1 }} and {{ $p2 }} by the fountain"
                      class="h-48 w-full object-cover">
             </div>
             <div class="overflow-hidden rounded-2xl shadow-md">
-                <img src="https://image-tc.galaxy.tf/wijpeg-9m21zgvi9wa2j9kpvdbyc2wcc/cabana-2341.jpg?width=860"
-                     alt="Descanso Beach Club cabana"
+                <img src="{{ asset('images/kelsey-matt-doorway.jpg') }}"
+                     alt="{{ $p1 }} and {{ $p2 }} together"
                      class="h-48 w-full object-cover">
             </div>
             <div class="overflow-hidden rounded-2xl shadow-md">
-                <img src="https://image-tc.galaxy.tf/wijpeg-71un4g8ebbcznyxacen7t51up/1q9b4594.jpg?width=860"
-                     alt="Descanso Beach chaise lounges"
+                <img src="{{ asset('images/kelsey-matt-throwback.jpg') }}"
+                     alt="{{ $p1 }} and {{ $p2 }} in their early days"
                      class="h-48 w-full object-cover">
             </div>
             <div class="overflow-hidden rounded-2xl shadow-md">
-                <img src="https://image-tc.galaxy.tf/wijpeg-26ovbzucgz5v7id8lv00pbp/bar-0451-1_standard.jpg?crop=106%2C0%2C1708%2C1281"
-                     alt="Descanso Beach Club bar"
+                <img src="{{ asset('images/kelsey-matt-formal.jpg') }}"
+                     alt="{{ $p1 }} and {{ $p2 }} dressed up for an evening out"
                      class="h-48 w-full object-cover">
             </div>
         </div>
