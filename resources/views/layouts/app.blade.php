@@ -41,13 +41,21 @@
 
     <footer class="relative mt-auto">
         <div class="overflow-hidden w-full">
-            <svg class="wave-scroll block text-lagoon-700 -mb-px"
-                 style="width: 200%; animation: wave-scroll 10s linear infinite;"
-                 viewBox="0 0 2880 120"
+            <svg class="block w-full text-lagoon-700 -mb-px"
+                 viewBox="0 0 1440 120"
                  preserveAspectRatio="none"
                  aria-hidden="true">
-                <path fill="currentColor"
-                      d="M0,64 C240,128 480,0 720,32 C960,64 1200,128 1440,64 C1680,128 1920,0 2160,32 C2400,64 2640,128 2880,64 L2880,120 L0,120 Z"></path>
+                <defs>
+                    <path id="wave-tile"
+                          d="M0,64 C240,128 480,0 720,32 C960,64 1200,128 1440,64 L1440,120 L0,120 Z"></path>
+                </defs>
+                {{-- Two tiles side by side; the group scrolls left by exactly one
+                     tile, so the loop is seamless. Keeping the <svg> itself at
+                     one viewport wide avoids the oversized compositor layer. --}}
+                <g class="wave-scroll" fill="currentColor">
+                    <use href="#wave-tile"></use>
+                    <use href="#wave-tile" x="1440"></use>
+                </g>
             </svg>
         </div>
         <div class="bg-lagoon-700 text-lagoon-100 text-center px-5 pb-10 -mt-px">

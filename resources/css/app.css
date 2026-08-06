@@ -49,28 +49,25 @@
 /*
  * Scrolling footer wave.
  *
- * The path tiles seamlessly at period 1440 of its 2880-unit viewBox, so
- * shifting the 200%-wide SVG by -50% lands exactly one tile over and the
- * loop is geometrically continuous.
+ * The <svg> stays one viewport wide and holds two copies of a 1440-unit tile;
+ * the inner <g> is what scrolls, by exactly one tile. Animating the SVG itself
+ * at width:200% produced a compositor layer wide enough that re-rasterising it
+ * at the loop boundary dropped the whole wave for a frame.
  *
- * translate3d + will-change keep the SVG on its own compositor layer.
- * Without them the browser re-rasterises the full two-viewport-wide vector
- * path when the animation restarts, dropping a frame that reads as a flash.
+ * -1440px is an absolute length, so it resolves to user units regardless of
+ * transform-box, unlike a percentage.
  */
 @keyframes wave-scroll {
-    from { transform: translate3d(0, 0, 0); }
-    to   { transform: translate3d(-50%, 0, 0); }
+    from { transform: translateX(0); }
+    to   { transform: translateX(-1440px); }
 }
 
-/* Width and animation stay inline on the element so the wave still runs if
-   the compiled stylesheet is stale; this class only adds the layer hints. */
 .wave-scroll {
-    will-change: transform;
-    backface-visibility: hidden;
+    animation: wave-scroll 10s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
     .wave-scroll {
-        animation: none !important;
+        animation: none;
     }
 }
