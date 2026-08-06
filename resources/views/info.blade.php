@@ -100,11 +100,13 @@
             </div>
         </section>
 
+        {{-- Temporarily hidden
         <div class="text-center">
             <a href="{{ route('magic-link.show') }}"
                class="inline-block rounded-full bg-coral-500 px-8 py-3 text-white font-medium shadow-md hover:bg-coral-600 transition">
                 RSVP Now
             </a>
         </div>
+        --}}
     </div>
 @endsection
