@@ -85,7 +85,7 @@
                         ['Can I bring a guest?', 'Your invitation will note how many seats we\'ve saved for you. Please let us know on the RSVP.'],
                         ['Is the ceremony outdoors?', 'Yes! Everything takes place beachside. We\'ll have shade, water, and a tent ready just in case.'],
                         ['What about kids?', 'We love your little ones, but this will be an adults-only celebration so everyone can relax.'],
-                        ['When should I RSVP?', 'Kindly reply by ' . config('wedding.rsvp_deadline') . ' so we can finalize the headcount.'],
+                        // Temporarily hidden: ['When should I RSVP?', 'Kindly reply by ' . config('wedding.rsvp_deadline') . ' so we can finalize the headcount.'],
                     ];
                 @endphp
                 @foreach ($faqs as [$q, $a])
