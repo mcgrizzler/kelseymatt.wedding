@@ -15,7 +15,7 @@
             <p class="text-sm uppercase tracking-[0.3em] text-white/70">We're getting married!</p>
 
             <h1 class="mt-6 text-script text-7xl sm:text-8xl text-white leading-none drop-shadow-lg">
-                {{ $p1 }} <span class="text-coral-400">&amp;</span> {{ $p2 }}
+                {{ $p1 }}<span class="text-coral-400 inline-block text-[0.6em] mx-[0.2em] align-middle">&amp;</span>{{ $p2 }}
             </h1>
 
             <p class="mt-8 text-xl sm:text-2xl font-serif text-white/90">

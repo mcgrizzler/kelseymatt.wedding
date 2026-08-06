@@ -20,7 +20,7 @@
     <header class="sticky top-0 z-30 backdrop-blur bg-sand-50/80 border-b border-sand-200/70">
         <nav class="mx-auto max-w-5xl px-5 h-16 flex items-center justify-between">
             <a href="{{ route('home') }}" class="text-script text-3xl text-lagoon-700 leading-none">
-                {{ $p1[0] }}&nbsp;&amp;&nbsp;{{ $p2[0] }}
+                {{ $p1[0] }}<span class="inline-block text-[0.65em] mx-[0.15em] align-middle">&amp;</span>{{ $p2[0] }}
             </a>
             <div class="flex items-center gap-6 text-sm font-medium tracking-wide uppercase">
                 <a href="{{ route('home') }}"
@@ -49,7 +49,7 @@
             </svg>
         </div>
         <div class="bg-lagoon-700 text-lagoon-100 text-center px-5 pb-10 -mt-px">
-            <p class="text-script text-4xl text-white">{{ $p1 }} &amp; {{ $p2 }}</p>
+            <p class="text-script text-4xl text-white">{{ $p1 }}<span class="inline-block text-[0.6em] mx-[0.2em] align-middle">&amp;</span>{{ $p2 }}</p>
             <p class="mt-2 text-sm tracking-widest uppercase">{{ config('wedding.date_pretty') }}</p>
             <p class="mt-1 text-sm text-lagoon-200">{{ config('wedding.venue.name') }} · {{ config('wedding.venue.city') }}</p>
             <p class="mt-4 text-xs text-lagoon-400">2026 <a href="https://gravis.dev" target="_blank" rel="noopener" class="hover:text-white transition">gravis.dev</a></p>

@@ -11,7 +11,7 @@
 <div class="mx-auto max-w-md px-5 py-20">
     <div class="text-center mb-10">
         <p class="text-sm uppercase tracking-[0.3em] text-lagoon-500">RSVP Access</p>
-        <h1 class="mt-3 text-script text-6xl text-lagoon-800">{{ $p1 }} &amp; {{ $p2 }}</h1>
+        <h1 class="mt-3 text-script text-6xl text-lagoon-800">{{ $p1 }}<span class="inline-block text-[0.6em] mx-[0.2em] align-middle">&amp;</span>{{ $p2 }}</h1>
         <p class="mt-3 font-serif text-lagoon-600">{{ config('wedding.date_pretty') }}</p>
     </div>
 
