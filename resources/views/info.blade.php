@@ -71,7 +71,7 @@
             <div class="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-sand-200">
                 <h3 class="font-serif text-2xl text-lagoon-800">Dress Code</h3>
                 <p class="mt-3 text-lagoon-600">
-                    Beach formal. Think breezy linens, flowing dresses, and pastel hues.
+                    Beach formal. Think flowing dresses and pastel hues.
                 </p>
             </div>
         </section>
