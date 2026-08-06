@@ -41,8 +41,7 @@
 
     <footer class="relative mt-auto">
         <div class="overflow-hidden w-full">
-            <svg class="block text-lagoon-700 -mb-px"
-                 style="width: 200%; animation: wave-scroll 10s linear infinite;"
+            <svg class="wave-scroll block text-lagoon-700 -mb-px"
                  viewBox="0 0 2880 120"
                  preserveAspectRatio="none"
                  aria-hidden="true">

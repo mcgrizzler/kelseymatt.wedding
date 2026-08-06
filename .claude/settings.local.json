@@ -6,7 +6,11 @@
       "Bash(php artisan *)",
       "Bash(curl -s http://127.0.0.1:8124/ -o /tmp/home.html)",
       "Read(//tmp/**)",
-      "Bash(pkill -f \"artisan serve\")"
+      "Bash(pkill -f \"artisan serve\")",
+      "Read(//Users/matthewgravis/.nvm/versions/**)",
+      "Read(//Users/matthewgravis/.local/share/fnm/**)",
+      "Read(//opt/homebrew/opt/**)",
+      "Bash(git check-ignore *)"
     ]
   }
 }
