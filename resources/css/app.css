@@ -62,16 +62,15 @@
     to   { transform: translate3d(-50%, 0, 0); }
 }
 
+/* Width and animation stay inline on the element so the wave still runs if
+   the compiled stylesheet is stale; this class only adds the layer hints. */
 .wave-scroll {
-    width: 200%;
-    transform: translate3d(0, 0, 0);
     will-change: transform;
     backface-visibility: hidden;
-    animation: wave-scroll 10s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
     .wave-scroll {
-        animation: none;
+        animation: none !important;
     }
 }
