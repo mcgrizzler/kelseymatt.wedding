@@ -27,8 +27,10 @@
                    class="hover:text-coral-500 transition {{ request()->routeIs('home') ? 'text-coral-500' : 'text-lagoon-700' }}">Home</a>
                 <a href="{{ route('info') }}"
                    class="hover:text-coral-500 transition {{ request()->routeIs('info') ? 'text-coral-500' : 'text-lagoon-700' }}">Info</a>
+                {{-- Temporarily hidden
                 <a href="{{ route('magic-link.show') }}"
                    class="rounded-full bg-coral-500 px-4 py-2 text-white shadow-sm hover:bg-coral-600 transition">RSVP</a>
+                --}}
             </div>
         </nav>
     </header>
